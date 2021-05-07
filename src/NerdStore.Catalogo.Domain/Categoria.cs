@@ -6,7 +6,6 @@ namespace NerdStore.Catalogo.Domain
     public class Categoria : Entity
     {
         protected Categoria() { }
-
         public Categoria(string nome, int codigo)
         {
             Nome = nome;
@@ -19,7 +18,7 @@ namespace NerdStore.Catalogo.Domain
         public int Codigo { get; private set; }
         public override string ToString() => $"{Nome} {Codigo}";
         public ICollection<Produto> Produtos { get; private set; }
-        public override void Validar()
+        public void Validar()
         {
             AssertionConcern.ValidarSeVazio(Nome, "O campo Nome não pode ser vazio.");
             AssertionConcern.ValidarSeMenorQue(Codigo, 1, "O campo Codigo não pode ser vazio.");

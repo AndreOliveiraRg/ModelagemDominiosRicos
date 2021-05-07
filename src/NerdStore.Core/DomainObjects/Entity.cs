@@ -35,6 +35,10 @@ namespace NerdStore.Core.DomainObjects
         public static bool operator !=(Entity a, Entity b) => !(a == b);
         public override int GetHashCode() => (GetType().GetHashCode() * ValueHashCode) + Id.GetHashCode();
         public override string ToString() => $"{GetType().Name} [Id ={Id}]";
-        public abstract void Validar();
+
+        public virtual bool EhValido()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -87,12 +87,12 @@ namespace NerdStore.Vendas.Domain
 
             item.AssociarPedido(Id);
 
-            if (PedidoItemExistente(item))
-                AtualizarItemExistente(item);
-
             item.CalcularValor();
 
-            _pedidoItems.Add(item);
+            if (PedidoItemExistente(item))
+                AtualizarItemExistente(item);
+            else
+                _pedidoItems.Add(item);
 
             CalcularValorPedido();
         }
@@ -101,8 +101,6 @@ namespace NerdStore.Vendas.Domain
         {
             var itemExistente = _pedidoItems.FirstOrDefault(p => p.ProdutoId == item.ProdutoId);
             itemExistente.AdicionarUnidades(item.Quantidade);
-
-            _pedidoItems.Remove(itemExistente);
         }
 
 

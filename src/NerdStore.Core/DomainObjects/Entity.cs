@@ -1,17 +1,36 @@
 ﻿using System;
+using System.Collections.Generic;
+using NerdStore.Core.Messages;
 
 namespace NerdStore.Core.DomainObjects
 {
     public abstract class Entity
     {
+        private List<Event> _notificacoes;
+        public IReadOnlyCollection<Event> Notificacoes => _notificacoes;
         private const int ValueHashCode = 180;
         public Guid Id { get; private set; }
 
         protected Entity()
         {
             Id = Guid.NewGuid();
-        }
+            _notificacoes = new List<Event>();
 
+
+        }
+        public void AdicionarEvento(Event evento)
+        {
+            _notificacoes = _notificacoes ?? new List<Event>();
+            _notificacoes.Add(evento);
+        }
+        public void RemoverEvento(Event eventItem)
+        {
+            _notificacoes?.Remove(eventItem);
+        }
+        public void LimparEventos()
+        {
+            _notificacoes?.Clear();
+        }
         public override bool Equals(object obj)
         {
             var compareTo = obj as Entity;
@@ -35,7 +54,6 @@ namespace NerdStore.Core.DomainObjects
         public static bool operator !=(Entity a, Entity b) => !(a == b);
         public override int GetHashCode() => (GetType().GetHashCode() * ValueHashCode) + Id.GetHashCode();
         public override string ToString() => $"{GetType().Name} [Id ={Id}]";
-
         public virtual bool EhValido()
         {
             throw new NotImplementedException();

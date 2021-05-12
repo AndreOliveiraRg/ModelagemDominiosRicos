@@ -13,5 +13,6 @@ namespace NerdStore.Vendas.Application.Queries.DTO
         public string VoucherCodigo { get; set; }
 
         public List<CarrinhoItemDTO> Items { get; set; } = new List<CarrinhoItemDTO>();
+        public CarrinhoPagamentoDTO Pagamento { get; set; }
     }
 }

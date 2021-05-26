@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using NerdStore.Catalogo.Domain.Events;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Core.DomainObjects.DTO;
-using NerdStore.Core.Messages.Notifications;
+using NerdStore.Core.Messages.CommonMessages.Notifications;
 
 namespace NerdStore.Catalogo.Domain
 {
@@ -12,7 +12,7 @@ namespace NerdStore.Catalogo.Domain
         private readonly IProdutoRepository _produtoRepository;
         private readonly IMediatorHandler _mediatorHandler;
 
-        public EstoqueService(IProdutoRepository produtoRepository,
+        public EstoqueService(IProdutoRepository produtoRepository, 
                               IMediatorHandler mediatorHandler)
         {
             _produtoRepository = produtoRepository;
@@ -53,7 +53,7 @@ namespace NerdStore.Catalogo.Domain
             // TODO: 10 pode ser parametrizavel em arquivo de configuração
             if (produto.QuantidadeEstoque < 10)
             {
-                await _mediatorHandler.PublicarEvento(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
+                await _mediatorHandler.PublicarDomainEvent(new ProdutoAbaixoEstoqueEvent(produto.Id, produto.QuantidadeEstoque));
             }
 
             _produtoRepository.Atualizar(produto);

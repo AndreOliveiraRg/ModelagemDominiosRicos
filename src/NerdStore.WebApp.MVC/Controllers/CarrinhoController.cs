@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using NerdStore.Catalogo.Application.Services;
 using NerdStore.Core.Communication.Mediator;
-using NerdStore.Core.Messages.Notifications;
+using NerdStore.Core.Messages.CommonMessages.Notifications;
 using NerdStore.Vendas.Application.Commands;
 using NerdStore.Vendas.Application.Queries;
-using NerdStore.Vendas.Application.Queries.DTO;
+using NerdStore.Vendas.Application.Queries.ViewModels;
 
 namespace NerdStore.WebApp.MVC.Controllers
 {
@@ -18,8 +20,8 @@ namespace NerdStore.WebApp.MVC.Controllers
         private readonly IMediatorHandler _mediatorHandler;
 
         public CarrinhoController(INotificationHandler<DomainNotification> notifications,
-                                  IProdutoAppService produtoAppService,
-                                  IMediatorHandler mediatorHandler,
+                                  IProdutoAppService produtoAppService, 
+                                  IMediatorHandler mediatorHandler, 
                                   IPedidoQueries pedidoQueries) : base(notifications, mediatorHandler)
         {
             _produtoAppService = produtoAppService;
@@ -112,14 +114,12 @@ namespace NerdStore.WebApp.MVC.Controllers
         [Route("resumo-da-compra")]
         public async Task<IActionResult> ResumoDaCompra()
         {
-            var pedido = await _pedidoQueries.ObterCarrinhoCliente(ClienteId);
-
-            return View(pedido);
+            return View(await _pedidoQueries.ObterCarrinhoCliente(ClienteId));
         }
 
         [HttpPost]
         [Route("iniciar-pedido")]
-        public async Task<IActionResult> IniciarPedido(CarrinhoDTO carrinhoViewModel)
+        public async Task<IActionResult> IniciarPedido(CarrinhoViewModel carrinhoViewModel)
         {
             var carrinho = await _pedidoQueries.ObterCarrinhoCliente(ClienteId);
 
@@ -130,7 +130,7 @@ namespace NerdStore.WebApp.MVC.Controllers
 
             if (OperacaoValida())
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Pedido");
             }
 
             return View("ResumoDaCompra", await _pedidoQueries.ObterCarrinhoCliente(ClienteId));

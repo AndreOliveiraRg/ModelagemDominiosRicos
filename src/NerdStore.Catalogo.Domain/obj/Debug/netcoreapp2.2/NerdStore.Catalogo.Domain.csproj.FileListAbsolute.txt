@@ -1,0 +1,12 @@
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.deps.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\bin\Debug\netcoreapp2.2\NerdStore.Core.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.csprojAssemblyReference.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.AssemblyInfoInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.AssemblyInfo.cs
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.csproj.CoreCompileInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.csproj.CopyComplete
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Catalogo.Domain\obj\Debug\netcoreapp2.2\NerdStore.Catalogo.Domain.pdb

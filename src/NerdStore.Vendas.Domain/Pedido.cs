@@ -1,8 +1,8 @@
-﻿using NerdStore.Core.DomainObjects;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentValidation.Results;
+using NerdStore.Core.DomainObjects;
 
 namespace NerdStore.Vendas.Domain
 {
@@ -20,6 +20,7 @@ namespace NerdStore.Vendas.Domain
         private readonly List<PedidoItem> _pedidoItems;
         public IReadOnlyCollection<PedidoItem> PedidoItems => _pedidoItems;
 
+        // EF Rel.
         public Voucher Voucher { get; private set; }
 
         public Pedido(Guid clienteId, bool voucherUtilizado, decimal desconto, decimal valorTotal)
@@ -39,9 +40,7 @@ namespace NerdStore.Vendas.Domain
         public ValidationResult AplicarVoucher(Voucher voucher)
         {
             var validationResult = voucher.ValidarSeAplicavel();
-
-            if (!validationResult.IsValid) 
-                return validationResult;
+            if (!validationResult.IsValid) return validationResult;
 
             Voucher = voucher;
             VoucherUtilizado = true;
@@ -95,22 +94,20 @@ namespace NerdStore.Vendas.Domain
 
             item.AssociarPedido(Id);
 
-            item.CalcularValor();
-
             if (PedidoItemExistente(item))
-                AtualizarItemExistente(item);
-            else
-                _pedidoItems.Add(item);
+            {
+                var itemExistente = _pedidoItems.FirstOrDefault(p => p.ProdutoId == item.ProdutoId);
+                itemExistente.AdicionarUnidades(item.Quantidade);
+                item = itemExistente;
+
+                _pedidoItems.Remove(itemExistente);
+            }
+
+            item.CalcularValor();
+            _pedidoItems.Add(item);
 
             CalcularValorPedido();
         }
-
-        private void AtualizarItemExistente(PedidoItem item)
-        {
-            var itemExistente = _pedidoItems.FirstOrDefault(p => p.ProdutoId == item.ProdutoId);
-            itemExistente.AdicionarUnidades(item.Quantidade);
-        }
-
 
         public void RemoverItem(PedidoItem item)
         {
@@ -164,6 +161,7 @@ namespace NerdStore.Vendas.Domain
         {
             PedidoStatus = PedidoStatus.Cancelado;
         }
+
         public static class PedidoFactory
         {
             public static Pedido NovoPedidoRascunho(Guid clienteId)

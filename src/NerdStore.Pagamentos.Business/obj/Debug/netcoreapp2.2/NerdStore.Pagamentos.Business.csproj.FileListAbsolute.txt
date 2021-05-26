@@ -1,0 +1,12 @@
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.deps.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\bin\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\bin\Debug\netcoreapp2.2\NerdStore.Core.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.csprojAssemblyReference.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.AssemblyInfoInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.AssemblyInfo.cs
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.csproj.CoreCompileInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.csproj.CopyComplete
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Business\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.pdb

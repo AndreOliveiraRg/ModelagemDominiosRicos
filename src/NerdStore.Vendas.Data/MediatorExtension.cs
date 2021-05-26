@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using NerdStore.Core.Communication.Mediator;
 using NerdStore.Core.DomainObjects;
 
@@ -8,7 +7,7 @@ namespace NerdStore.Vendas.Data
 {
     public static class MediatorExtension
     {
-        public static async Task PublicarEventos<T>(this IMediatorHandler mediator, T ctx) where T : DbContext
+        public static async Task PublicarEventos(this IMediatorHandler mediator, VendasContext ctx)
         {
             var domainEntities = ctx.ChangeTracker
                 .Entries<Entity>()
@@ -22,8 +21,7 @@ namespace NerdStore.Vendas.Data
                 .ForEach(entity => entity.Entity.LimparEventos());
 
             var tasks = domainEvents
-                .Select(async (domainEvent) =>
-                {
+                .Select(async (domainEvent) => {
                     await mediator.PublicarEvento(domainEvent);
                 });
 

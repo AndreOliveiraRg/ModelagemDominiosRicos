@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NerdStore.Vendas.Application.Queries.DTO;
+using NerdStore.Vendas.Application.Queries.ViewModels;
 using NerdStore.Vendas.Domain;
 
 namespace NerdStore.Vendas.Application.Queries
@@ -16,12 +16,12 @@ namespace NerdStore.Vendas.Application.Queries
             _pedidoRepository = pedidoRepository;
         }
 
-        public async Task<CarrinhoDTO> ObterCarrinhoCliente(Guid clienteId)
+        public async Task<CarrinhoViewModel> ObterCarrinhoCliente(Guid clienteId)
         {
             var pedido = await _pedidoRepository.ObterPedidoRascunhoPorClienteId(clienteId);
             if (pedido == null) return null;
 
-            var carrinho = new CarrinhoDTO
+            var carrinho = new CarrinhoViewModel
             {
                 ClienteId = pedido.ClienteId,
                 ValorTotal = pedido.ValorTotal,
@@ -37,7 +37,7 @@ namespace NerdStore.Vendas.Application.Queries
 
             foreach (var item in pedido.PedidoItems)
             {
-                carrinho.Items.Add(new CarrinhoItemDTO
+                carrinho.Items.Add(new CarrinhoItemViewModel
                 {
                     ProdutoId = item.ProdutoId,
                     ProdutoNome = item.ProdutoNome,
@@ -50,7 +50,7 @@ namespace NerdStore.Vendas.Application.Queries
             return carrinho;
         }
 
-        public async Task<IEnumerable<PedidoDTO>> ObterPedidosCliente(Guid clienteId)
+        public async Task<IEnumerable<PedidoViewModel>> ObterPedidosCliente(Guid clienteId)
         {
             var pedidos = await _pedidoRepository.ObterListaPorClienteId(clienteId);
 
@@ -59,12 +59,13 @@ namespace NerdStore.Vendas.Application.Queries
 
             if (!pedidos.Any()) return null;
 
-            var pedidosView = new List<PedidoDTO>();
+            var pedidosView = new List<PedidoViewModel>();
 
             foreach (var pedido in pedidos)
             {
-                pedidosView.Add(new PedidoDTO
+                pedidosView.Add(new PedidoViewModel
                 {
+                    Id = pedido.Id,
                     ValorTotal = pedido.ValorTotal,
                     PedidoStatus = (int)pedido.PedidoStatus,
                     Codigo = pedido.Codigo,

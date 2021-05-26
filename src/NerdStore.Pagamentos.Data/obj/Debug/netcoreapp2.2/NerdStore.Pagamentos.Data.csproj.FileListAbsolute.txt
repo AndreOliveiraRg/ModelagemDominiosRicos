@@ -1,0 +1,17 @@
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.deps.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.runtimeconfig.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.runtimeconfig.dev.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Core.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\bin\Debug\netcoreapp2.2\NerdStore.Pagamentos.Business.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.csprojAssemblyReference.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.AssemblyInfoInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.AssemblyInfo.cs
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.csproj.CoreCompileInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.csproj.CopyComplete
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Pagamentos.Data\obj\Debug\netcoreapp2.2\NerdStore.Pagamentos.Data.genruntimeconfig.cache

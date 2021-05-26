@@ -8,6 +8,7 @@ namespace NerdStore.Catalogo.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Categoria> builder)
         {
+
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.Nome)
@@ -19,7 +20,6 @@ namespace NerdStore.Catalogo.Data.Mappings
                 .WithOne(p => p.Categoria)
                 .HasForeignKey(p => p.CategoriaId);
 
-            builder.Ignore(c => c.Notificacoes);
             builder.ToTable("Categorias");
         }
     }

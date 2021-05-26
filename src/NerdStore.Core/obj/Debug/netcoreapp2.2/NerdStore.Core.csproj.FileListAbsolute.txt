@@ -1,0 +1,9 @@
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\bin\Debug\netcoreapp2.2\NerdStore.Core.deps.json
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\bin\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\bin\Debug\netcoreapp2.2\NerdStore.Core.pdb
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.csprojAssemblyReference.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.AssemblyInfoInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.AssemblyInfo.cs
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.csproj.CoreCompileInputs.cache
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\NerdStore.Core\obj\Debug\netcoreapp2.2\NerdStore.Core.pdb

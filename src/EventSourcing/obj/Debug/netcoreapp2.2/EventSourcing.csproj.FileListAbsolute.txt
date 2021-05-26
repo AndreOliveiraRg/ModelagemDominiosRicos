@@ -1,0 +1,12 @@
+D:\Projeto - DDD\NerdStore\src\EventSourcing\bin\Debug\netcoreapp2.2\EventSourcing.deps.json
+D:\Projeto - DDD\NerdStore\src\EventSourcing\bin\Debug\netcoreapp2.2\EventSourcing.dll
+D:\Projeto - DDD\NerdStore\src\EventSourcing\bin\Debug\netcoreapp2.2\EventSourcing.pdb
+D:\Projeto - DDD\NerdStore\src\EventSourcing\bin\Debug\netcoreapp2.2\NerdStore.Core.dll
+D:\Projeto - DDD\NerdStore\src\EventSourcing\bin\Debug\netcoreapp2.2\NerdStore.Core.pdb
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.csprojAssemblyReference.cache
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.AssemblyInfoInputs.cache
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.AssemblyInfo.cs
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.csproj.CoreCompileInputs.cache
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.csproj.CopyComplete
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.dll
+D:\Projeto - DDD\NerdStore\src\EventSourcing\obj\Debug\netcoreapp2.2\EventSourcing.pdb

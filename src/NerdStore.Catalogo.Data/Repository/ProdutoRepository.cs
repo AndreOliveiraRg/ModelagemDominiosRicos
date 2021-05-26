@@ -1,10 +1,10 @@
-﻿using NerdStore.Catalogo.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using NerdStore.Catalogo.Domain;
 using NerdStore.Core.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 namespace NerdStore.Catalogo.Data.Repository
 {
@@ -14,7 +14,7 @@ namespace NerdStore.Catalogo.Data.Repository
 
         public ProdutoRepository(CatalogoContext context)
         {
-            _context = context;  
+            _context = context;
         }
         public IUnitOfWork UnitOfWork => _context;
 
@@ -25,7 +25,8 @@ namespace NerdStore.Catalogo.Data.Repository
 
         public async Task<Produto> ObterPorId(Guid id)
         {
-            return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            //return await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Produtos.FindAsync(id);
         }
 
         public async Task<IEnumerable<Produto>> ObterPorCategoria(int codigo)

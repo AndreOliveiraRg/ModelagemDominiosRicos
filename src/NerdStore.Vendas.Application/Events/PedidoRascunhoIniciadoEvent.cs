@@ -12,7 +12,7 @@ namespace NerdStore.Vendas.Application.Events
         {
             AggregateId = pedidoId;
             ClienteId = clienteId;
-            PedidoId = pedidoId;    
+            PedidoId = pedidoId;
         }
     }
 }

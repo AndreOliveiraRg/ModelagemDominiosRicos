@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NerdStore.Catalogo.Application.Services;
-using NerdStore.Catalogo.Application.DTO;
+using NerdStore.Catalogo.Application.ViewModels;
 
 namespace NerdStore.WebApp.MVC.Controllers.Admin
 {
@@ -25,16 +25,16 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
         [Route("novo-produto")]
         public async Task<IActionResult> NovoProduto()
         {
-            return View(await PopularCategorias(new ProdutoDTO()));
+            return View(await PopularCategorias(new ProdutoViewModel()));
         }
 
         [Route("novo-produto")]
         [HttpPost]
-        public async Task<IActionResult> NovoProduto(ProdutoDTO ProdutoDTO)
+        public async Task<IActionResult> NovoProduto(ProdutoViewModel produtoViewModel)
         {
-            if (!ModelState.IsValid) return View(await PopularCategorias(ProdutoDTO));
+            if (!ModelState.IsValid) return View(await PopularCategorias(produtoViewModel));
 
-            await _produtoAppService.AdicionarProduto(ProdutoDTO);
+            await _produtoAppService.AdicionarProduto(produtoViewModel);
 
             return RedirectToAction("Index");
         }
@@ -48,15 +48,15 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
 
         [HttpPost]
         [Route("editar-produto")]
-        public async Task<IActionResult> AtualizarProduto(Guid id, ProdutoDTO ProdutoDTO)
+        public async Task<IActionResult> AtualizarProduto(Guid id, ProdutoViewModel produtoViewModel)
         {
             var produto = await _produtoAppService.ObterPorId(id);
-            ProdutoDTO.QuantidadeEstoque = produto.QuantidadeEstoque;
+            produtoViewModel.QuantidadeEstoque = produto.QuantidadeEstoque;
 
             ModelState.Remove("QuantidadeEstoque");
-            if (!ModelState.IsValid) return View(await PopularCategorias(ProdutoDTO));
+            if (!ModelState.IsValid) return View(await PopularCategorias(produtoViewModel));
 
-            await _produtoAppService.AtualizarProduto(ProdutoDTO);
+            await _produtoAppService.AtualizarProduto(produtoViewModel);
 
             return RedirectToAction("Index");
         }
@@ -84,7 +84,7 @@ namespace NerdStore.WebApp.MVC.Controllers.Admin
             return View("Index", await _produtoAppService.ObterTodos());
         }
 
-        private async Task<ProdutoDTO> PopularCategorias(ProdutoDTO produto)
+        private async Task<ProdutoViewModel> PopularCategorias(ProdutoViewModel produto)
         {
             produto.Categorias = await _produtoAppService.ObterCategorias();
             return produto;

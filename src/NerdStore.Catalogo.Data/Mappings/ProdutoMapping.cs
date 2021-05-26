@@ -37,7 +37,6 @@ namespace NerdStore.Catalogo.Data.Mappings
                     .HasColumnType("int");
             });
 
-            builder.Ignore(c => c.Notificacoes);
             builder.ToTable("Produtos");
         }
     }

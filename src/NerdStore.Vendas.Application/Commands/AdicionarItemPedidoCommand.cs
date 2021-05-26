@@ -18,7 +18,7 @@ namespace NerdStore.Vendas.Application.Commands
             ProdutoId = produtoId;
             Nome = nome;
             Quantidade = quantidade;
-            ValorUnitario = valorUnitario;  
+            ValorUnitario = valorUnitario;
         }
 
         public override bool EhValido()

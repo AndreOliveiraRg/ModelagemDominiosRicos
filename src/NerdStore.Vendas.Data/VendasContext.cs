@@ -39,11 +39,9 @@ namespace NerdStore.Vendas.Data
                     entry.Property("DataCadastro").IsModified = false;
                 }
             }
-
+            
             var sucesso = await base.SaveChangesAsync() > 0;
-
-            if (sucesso)
-                await _mediatorHandler.PublicarEventos<VendasContext>(this);
+            if(sucesso) await _mediatorHandler.PublicarEventos(this);
 
             return sucesso;
         }

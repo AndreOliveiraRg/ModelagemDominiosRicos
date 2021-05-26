@@ -11,9 +11,11 @@ namespace NerdStore.Catalogo.Domain
         Task<Produto> ObterPorId(Guid id);
         Task<IEnumerable<Produto>> ObterPorCategoria(int codigo);
         Task<IEnumerable<Categoria>> ObterCategorias();
+
         void Adicionar(Produto produto);
         void Atualizar(Produto produto);
-        void Adicionar(Categoria produto);
-        void Atualizar(Categoria produto);
+
+        void Adicionar(Categoria categoria);
+        void Atualizar(Categoria categoria);
     }
 }
